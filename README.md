@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Site" src="/assets/site.png"/>
+    <img src="src/assets/site.png"/>
 </h3>
 
 <h1 align="center"> Teste RD </h1>
