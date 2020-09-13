@@ -51,4 +51,5 @@ export const ButtonClosed = styled.button`
 `;
 export const Content = styled.div`
   text-align: center;
+  padding: 10px;
 `;

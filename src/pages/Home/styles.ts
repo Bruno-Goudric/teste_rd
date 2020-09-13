@@ -1,13 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0px 20px;
-`;
-
 export const Header = styled.header`
   display: flex;
   align-items: center;
@@ -26,7 +19,7 @@ export const Header = styled.header`
 
       a {
         text-transform: uppercase;
-        color: #007f56;
+        color: ${props => props.theme.colors.primary};
         text-decoration: none;
       }
     }
@@ -45,19 +38,19 @@ export const BoxInfo = styled.section`
 
   h1 {
     font-size: 40px;
-    color: #007f56;
+    color: ${props => props.theme.colors.text};
     font-weight: 300;
     margin-bottom: 20px;
   }
 
   span {
-    color: #007f56;
+    color: ${props => props.theme.colors.text};
     font-weight: 800;
   }
 
   p {
     font-size: 20px;
-    color: #868686;
+    color: ${props => props.theme.colors.primary};
   }
 `;
 export const BoxCard = styled.section`
@@ -162,7 +155,7 @@ export const Footer = styled.section`
 `;
 export const BoxSite = styled.section`
   font-size: 15px;
-  color: #868686;
+  color: ${props => props.theme.colors.primary};
 `;
 export const BoxImg = styled.section``;
 export const BoxLogo = styled.section``;

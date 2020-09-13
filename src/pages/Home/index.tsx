@@ -4,7 +4,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/order */
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 import logo from '../../assets/rd.png';
 import desktop from '../../assets/desktop.png';
@@ -17,9 +18,10 @@ import univers from '../../assets/univers.png';
 import bio from '../../assets/4bio.png';
 import rd_small from '../../assets/rd-small.png';
 import Popup from '../../components/Popup';
+import Layout from '../../components/Layout';
 
 import {
-  Container,
+  // Container,
   Header,
   Logo,
   BoxInfo,
@@ -37,14 +39,18 @@ import {
   BoxLogo,
 } from './styles';
 
-const Home: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Home: React.FC<Props> = ({ toggleTheme }) => {
   const [readMore, setReadMore] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const extraContent = <span>Conteúdo com mais informações.</span>;
 
   const buttonName = readMore ? 'Leia menos' : 'Leia mais...';
   return (
-    <Container>
+    <Layout>
       <Header>
         <Logo src={logo} alt="" />
         <ul>
@@ -140,7 +146,7 @@ const Home: React.FC = () => {
               Quando pressionado o botão alterar tema... modifique o tema do
               site para blackfriday a seu gosto.
             </p>
-            <button>alterar tema</button>
+            <button onClick={toggleTheme}>alterar tema</button>
           </CardInfoThird>
         </Card>
       </BoxCard>
@@ -157,7 +163,7 @@ const Home: React.FC = () => {
           <img src={rd_small} alt="" />
         </BoxLogo>
       </Footer>
-    </Container>
+    </Layout>
   );
 };
 
