@@ -37,7 +37,6 @@ export const Logo = styled.img`
   min-width: 78px;
 `;
 
-
 export const BoxInfo = styled.section`
   max-width: 800px;
   text-align: center;
@@ -72,7 +71,7 @@ export const Card = styled.section`
 export const CardImgFirst = styled.section`
   text-align: center;
   padding: 20px;
-  background: #FE9481;
+  background: #fe9481;
 
   p {
     font-size: 27px;
@@ -116,11 +115,10 @@ export const CardInfoFirst = styled.section`
   button {
     margin-left: 70%;
     padding: 10px;
-    background: #FE9481;
+    background: #fe9481;
     border: none;
     color: #fff;
     font-weight: 300;
-
   }
 `;
 
@@ -130,7 +128,6 @@ export const CardInfoSecond = styled.section`
   padding: 0px 10px;
   color: #868686;
 
-
   button {
     margin-left: 70%;
     padding: 10px;
@@ -138,7 +135,6 @@ export const CardInfoSecond = styled.section`
     border: none;
     color: #fff;
     font-weight: 300;
-
   }
 `;
 
@@ -163,10 +159,9 @@ export const Footer = styled.section`
   align-items: center;
 
   margin-top: 20px;
-
 `;
 export const BoxSite = styled.section`
-font-size: 15px;
+  font-size: 15px;
   color: #868686;
 `;
 export const BoxImg = styled.section``;

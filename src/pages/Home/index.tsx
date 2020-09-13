@@ -1,3 +1,9 @@
+/* eslint-disable import/extensions */
+// /* eslint-disable prettier/prettier */
+/* eslint-disable camelcase */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/order */
+/* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
 
 import logo from '../../assets/rd.png';
@@ -10,6 +16,7 @@ import farmasil from '../../assets/farmasil.png';
 import univers from '../../assets/univers.png';
 import bio from '../../assets/4bio.png';
 import rd_small from '../../assets/rd-small.png';
+import Popup from '../../components/Popup';
 
 import {
   Container,
@@ -31,18 +38,31 @@ import {
 } from './styles';
 
 const Home: React.FC = () => {
-  const [open, setOpen ] = useState(false);
+  const [readMore, setReadMore] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const extraContent = <span>Conteúdo com mais informações.</span>;
 
+  const buttonName = readMore ? 'Leia menos' : 'Leia mais...';
   return (
     <Container>
       <Header>
         <Logo src={logo} alt="" />
         <ul>
-          <li><a href="#">html5</a></li>
-          <li><a href="#">CSS3</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">React</a></li>
-          <li><a href="#">Redux</a></li>
+          <li>
+            <a href="#">html5</a>
+          </li>
+          <li>
+            <a href="#">CSS3</a>
+          </li>
+          <li>
+            <a href="#">JavaScript</a>
+          </li>
+          <li>
+            <a href="#">React</a>
+          </li>
+          <li>
+            <a href="#">Redux</a>
+          </li>
         </ul>
       </Header>
       <BoxInfo>
@@ -65,9 +85,15 @@ const Home: React.FC = () => {
           <CardInfoFirst>
             <p>
               Quando pressionado o botão Leia mais... o restante da informação
-              deverá aparecer em scroll down.
+              deverá aparecer em scroll down.{readMore && extraContent}
             </p>
-            <button>Leia mais...</button>
+            <button
+              onClick={() => {
+                setReadMore(!readMore);
+              }}
+            >
+              {buttonName}
+            </button>
           </CardInfoFirst>
         </Card>
 
@@ -81,9 +107,26 @@ const Home: React.FC = () => {
               Quando pressionado o botão Leia mais... o restante da informação
               deverá aparecer em um pop-up na tela.
             </p>
-              <button >Leia mais...</button>
-
-
+            <button
+              onClick={() => {
+                setIsModalVisible(!isModalVisible);
+              }}
+            >
+              Leia mais...
+            </button>
+            {isModalVisible ? (
+              <Popup onClose={() => setIsModalVisible(false)}>
+                <h2>Site Responsivo Tablet</h2>
+                <p>
+                  Quando pressionado o botão Leia mais... o restante da
+                  informação deverá aparecer em um pop-up na tela. Lorem ipsum
+                  dolor sit amet, consectetur adipisicing elit. Consequatur
+                  minima quas eaque omnis ex deleniti ipsum magnam laboriosam
+                  nulla nihil aut minus accusamus temporibus, aspernatur ipsa
+                  iusto maiores nostrum quis!
+                </p>
+              </Popup>
+            ) : null}
           </CardInfoSecond>
         </Card>
 
