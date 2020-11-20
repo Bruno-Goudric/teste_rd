@@ -1,9 +1,3 @@
-/* eslint-disable import/extensions */
-// /* eslint-disable prettier/prettier */
-/* eslint-disable camelcase */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/order */
-/* eslint-disable react/button-has-type */
 import React, { useState, useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
@@ -21,7 +15,6 @@ import Popup from '../../components/Popup';
 import Layout from '../../components/Layout';
 
 import {
-  // Container,
   Header,
   Logo,
   BoxInfo,

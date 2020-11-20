@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import styled from 'styled-components';
 
 export const Header = styled.header`
