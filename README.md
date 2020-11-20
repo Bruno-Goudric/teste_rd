@@ -12,11 +12,11 @@ Para o desenvolvimento do projeto foi utilizada uma stack com as seguintes tecno
 
 ## Desafio
 
-:blush: Site Responsivo;
-:blush: Utilizar ReactJs;
-:blush: Utilizar styled-components;
-:blush: Utilizar o Container: width 1200px;
-:cry: Aplicar a ação informada nos cards;
+:blush: Site Responsivo;<br />
+:blush: Utilizar ReactJs;<br />
+:blush: Utilizar styled-components;<br />
+:blush: Utilizar o Container: width 1200px;<br />
+:blush: Aplicar a ação informada nos cards;<br />
 
 ## Requisitos
 
